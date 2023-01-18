@@ -4,13 +4,25 @@
  * SPDX-License-Identifier: BSD-3-Clause
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
+// import fetch from 'cross-fetch';
+
+
+// console.log(Data.global.color.textColor.value, "json data 111");
+// fetch('http://example.com/movies.json')
+//   .then((response) => response.json())
+//   .then((data) => console.log(data, "printing data"));
+import data from '../../../figmaData/tokens.json'
+
+// import figmaColors from './figma'
+
 const colors = {
     transparent: 'transparent',
     current: 'currentColor',
     black: '#000000',
     white: '#FFFFFF',
     beige: '#FAEBD8',
-    earthBrown: '#5F504D',
+    globalBackgroundColor: data.global.color.backgroundColor.value,
+    globalTextColor: data.global.color.globalTextColor.value,
 
     whiteAlpha: {
         50: 'rgba(255, 255, 255, 0.04)',

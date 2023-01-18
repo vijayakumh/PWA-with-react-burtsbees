@@ -52,7 +52,7 @@ export default {
             marginLeft: 3,
             fontSize: 'md',
             fontWeight: 700,
-            color: 'gray.900',
+            // color: 'gray.900',
             _hover: {
                 textDecoration: 'none'
             }

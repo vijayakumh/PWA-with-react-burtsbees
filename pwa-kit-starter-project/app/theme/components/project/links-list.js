@@ -8,7 +8,6 @@ export default {
     parts: ['container', 'list', 'listItem', 'listItemSx', 'heading'],
     baseStyle: {
         container: {
-            color: 'white'
         },
         list: {
             fontSize: 'sm'
@@ -22,12 +21,10 @@ export default {
             paddingBottom: "16px",
             fontWeight: "500",
             fontSize: "18px",
-            color: "earthBrown"
         },
         burtsListItem: {
             fontWeight: "400",
             lineHeight: "130%",
-            color: "earthBrown",
             paddingBottom: "8px"
         }
     },

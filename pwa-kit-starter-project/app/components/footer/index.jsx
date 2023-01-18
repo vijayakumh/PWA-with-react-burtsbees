@@ -291,32 +291,34 @@ const Footer = ({...otherProps}) => {
                                 </Text>
                             </Box>
                             <Box>
-                                <Text>
-                                    {intl.formatMessage({
-                                        id: 'burtsfooter.content_bottom.connect_with_us',
-                                        defaultMessage: ''
-                                    })}
-                                </Text>
-                                <Text>
-                                    {intl.formatMessage({
-                                        id: 'burtsfooter.content_bottom.#burtsbees',
-                                        defaultMessage: ''
-                                    })}
-                                </Text>
-                                <SocialIcons variant="flex-start" pinterestInnerColor="black" {...styles.socialIcons} />
                                 <Box>
-                                    <Link>
+                                    <Text>
                                         {intl.formatMessage({
-                                            id: 'burtsfooter.content_bottom.burtsbees_baby',
+                                            id: 'burtsfooter.content_bottom.connect_with_us',
                                             defaultMessage: ''
                                         })}
-                                    </Link>
-                                    <Link>
+                                    </Text>
+                                    <Text>
                                         {intl.formatMessage({
-                                            id: 'burtsfooter.content_bottom.burtsbees_pets',
+                                            id: 'burtsfooter.content_bottom.#burtsbees',
                                             defaultMessage: ''
                                         })}
-                                    </Link>
+                                    </Text>
+                                    <SocialIcons variant="flex-start" pinterestInnerColor="black" {...styles.socialIcons} />
+                                    <Box>
+                                        <Link>
+                                            {intl.formatMessage({
+                                                id: 'burtsfooter.content_bottom.burtsbees_baby',
+                                                defaultMessage: ''
+                                            })}
+                                        </Link>
+                                        <Link>
+                                            {intl.formatMessage({
+                                                id: 'burtsfooter.content_bottom.burtsbees_pets',
+                                                defaultMessage: ''
+                                            })}
+                                        </Link>
+                                    </Box>
                                 </Box>
                             </Box>
 
