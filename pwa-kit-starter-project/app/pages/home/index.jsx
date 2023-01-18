@@ -220,7 +220,6 @@ const Home = ({productSearchResult, isLoading}) => {
                                             height={16}
                                             align={'center'}
                                             justify={'left'}
-                                            color={'gray.900'}
                                             paddingX={2}
                                         >
                                             {feature.icon}

@@ -145,7 +145,6 @@ const ListMenuContent = ({maxColumns, items, itemsKey, onClose, initialFocusRef}
                                     key={id}
                                     heading={heading}
                                     links={links}
-                                    color={'gray.900'}
                                     onLinkClick={onClose}
                                     {...(index === 0 ? {headingLinkRef: initialFocusRef} : {})}
                                 />

@@ -35,7 +35,6 @@ export default {
             maxWidth: 'container.xxl',
             marginLeft: 'auto',
             marginRight: 'auto',
-            color: 'earthBrown',
             paddingTop: {base: 8, lg: '47px'},
             paddingBottom: 8,
             paddingLeft: [4, 4, 0, 0],
@@ -48,12 +47,11 @@ export default {
             fontSize: '14px',
             fontWeight: '600',
             background: 'white',
-            color: 'gray.900',
             border: '1px solid',
-            borderColor: 'earthBrown',
+            borderColor: 'globalTextColor',
             borderRadius: 'none',
             _placeholder: {
-                color: 'earthBrown'
+                color: 'globalTextColor'
             }
         },
         subscribeButtonContainer: {
@@ -63,7 +61,6 @@ export default {
             paddingBottom: "16px",
             fontWeight: "500",
             fontSize: "18px",
-            color: "earthBrown"
         },
         subscribeMessage: {
             fontSize: 'sm',
@@ -97,17 +94,15 @@ export default {
         copyright: {
             fontSize: 'sm',
             marginBottom: 6,
-            color: 'earthBrown'
         },
         socialIcons: {
             marginTop: 4
         },
         textColor: {
-            color: '#5F504D',
             width: '33%'
         },
         subscribeButtonContainerButton: {
-            background: 'earthBrown',
+            background: 'globalTextColor',
             borderRadius: 'none',
             width: "100%"
         },
@@ -122,7 +117,6 @@ export default {
         burtsfooterButton: {
             background: "none",
             backgroundColor: "none",
-            color: "earthBrown"
         },
         linkedListStyle: {
             direction:"columns",

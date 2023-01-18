@@ -52,7 +52,6 @@ const LoginForm = ({submitForm, clickForgotPassword = noop, clickCreateAccount =
                             onClick={() => form.clearErrors('global')}
                             isLoading={form.formState.isSubmitting}
                             backgroundColor={"#FFD203"}
-                            color={"#5F504D"}
                             borderRadius={"none"}
                             _hover={{ backgroundColor: "#5F504D", color: "#ffffff" }}
                         >
@@ -66,7 +65,7 @@ const LoginForm = ({submitForm, clickForgotPassword = noop, clickCreateAccount =
                             <Button variant="link" size="sm" onClick={clickForgotPassword}
                                 fontSize={{base: "16px"}}
                                 fontWeight={{base: "500"}}
-                                color={"#5F504D"}
+                                // color={"#5F504D"}
                                 textDecoration={"underline"}
                             >
                                 <FormattedMessage
@@ -82,7 +81,7 @@ const LoginForm = ({submitForm, clickForgotPassword = noop, clickCreateAccount =
             <Stack direction="column" justify={"center"} alignItems={"center"} paddingTop={"24px"}>
                 <Text fontSize="16px"
                     fontWeight={"500"}
-                    color={"#5F504D"}
+                    // color={"#5F504D"}
                     paddingBottom={{base: "8px"}}
                 >
                     <FormattedMessage
@@ -93,7 +92,7 @@ const LoginForm = ({submitForm, clickForgotPassword = noop, clickCreateAccount =
                 <Button variant="link" size="sm" onClick={clickCreateAccount}
                     fontSize={{base: "16px"}}
                     fontWeight={{base: "400"}}
-                    color={{base:"#5F504D"}}
+                    // color={{base:"#5F504D"}}
                 >
                     <FormattedMessage
                         defaultMessage="Create account"

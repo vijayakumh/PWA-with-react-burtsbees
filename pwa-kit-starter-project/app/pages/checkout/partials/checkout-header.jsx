@@ -30,7 +30,6 @@ const CheckoutHeader = () => {
                         href="/cart"
                         display="inline-flex"
                         variant="unstyled"
-                        color="gray.900"
                         rightIcon={
                             <Center position="relative" width={11} height={11}>
                                 <BasketIcon position="absolute" left="0px" />
