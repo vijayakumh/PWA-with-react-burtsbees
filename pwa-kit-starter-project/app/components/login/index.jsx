@@ -25,15 +25,17 @@ const LoginForm = ({submitForm, clickForgotPassword = noop, clickCreateAccount =
                     />
                 </Text>
             </Stack>
-            <Divider orientation='horizontal' mt={"28px"}/>
+            <Divider orientation="horizontal" mt={'28px'} />
             <form
                 id="login-form"
                 onSubmit={form.handleSubmit(submitForm)}
                 data-testid="sf-auth-modal-form"
             >
-                <Stack spacing={"24px"} paddingTop={"24px"}
+                <Stack
+                    spacing={'24px'}
+                    paddingTop={'24px'}
                     maxWidth={{base: '270px', md: '270px', lg: '320px'}}
-                    margin={"0 auto"}
+                    margin={'0 auto'}
                 >
                     {form.errors?.global && (
                         <Alert status="error">
@@ -46,14 +48,14 @@ const LoginForm = ({submitForm, clickForgotPassword = noop, clickCreateAccount =
                     <Stack>
                         <LoginFields form={form} />
                     </Stack>
-                    <Stack spacing={"24px"}>
+                    <Stack spacing={'24px'}>
                         <Button
                             type="submit"
+                            variant="solid"
+                            colorScheme="burtsbeesbrand"
+                            // size="lg"
                             onClick={() => form.clearErrors('global')}
                             isLoading={form.formState.isSubmitting}
-                            backgroundColor={"#FFD203"}
-                            borderRadius={"none"}
-                            _hover={{ backgroundColor: "#5F504D", color: "#ffffff" }}
                         >
                             <FormattedMessage
                                 defaultMessage="Sign In"
@@ -61,12 +63,15 @@ const LoginForm = ({submitForm, clickForgotPassword = noop, clickCreateAccount =
                             />
                         </Button>
 
-                        <Box textAlign={"center"}>
-                            <Button variant="link" size="sm" onClick={clickForgotPassword}
-                                fontSize={{base: "16px"}}
-                                fontWeight={{base: "500"}}
-                                // color={"#5F504D"}
-                                textDecoration={"underline"}
+                        <Box textAlign={'center'}>
+                            <Button
+                                variant="link"
+                                size="sm"
+                                onClick={clickForgotPassword}
+                                fontSize={{base: '16px'}}
+                                fontWeight={{base: '500'}}
+                                textDecoration={'underline'}
+                                colorScheme="burtsbeesbrand"
                             >
                                 <FormattedMessage
                                     defaultMessage="Forgot password?"
@@ -77,22 +82,26 @@ const LoginForm = ({submitForm, clickForgotPassword = noop, clickCreateAccount =
                     </Stack>
                 </Stack>
             </form>
-            <Divider orientation='horizontal' mt={"28px"}/>
-            <Stack direction="column" justify={"center"} alignItems={"center"} paddingTop={"24px"}>
-                <Text fontSize="16px"
-                    fontWeight={"500"}
+            <Divider orientation="horizontal" mt={'28px'} />
+            <Stack direction="column" justify={'center'} alignItems={'center'} paddingTop={'24px'}>
+                <Text
+                    fontSize="16px"
+                    fontWeight={'500'}
                     // color={"#5F504D"}
-                    paddingBottom={{base: "8px"}}
+                    paddingBottom={{base: '8px'}}
                 >
                     <FormattedMessage
                         defaultMessage="Don't have an account?"
                         id="login_form.message.dont_have_account"
                     />
                 </Text>
-                <Button variant="link" size="sm" onClick={clickCreateAccount}
-                    fontSize={{base: "16px"}}
-                    fontWeight={{base: "400"}}
-                    // color={{base:"#5F504D"}}
+                <Button
+                    variant="link"
+                    size="sm"
+                    onClick={clickCreateAccount}
+                    fontSize={{base: '16px'}}
+                    fontWeight={{base: '400'}}
+                    colorScheme="burtsbeesbrand"
                 >
                     <FormattedMessage
                         defaultMessage="Create account"

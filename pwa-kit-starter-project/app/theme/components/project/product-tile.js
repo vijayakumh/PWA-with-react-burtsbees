@@ -4,9 +4,19 @@
  * SPDX-License-Identifier: BSD-3-Clause
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
+
+import figmaColors from '../../foundations/figma'
+
 export default {
     baseStyle: () => ({
-        container: {},
+        container: {
+            background: figmaColors.plpTileBackground,
+            borderRadius: figmaColors.plpTileBorderRadius,
+            boxShadow: figmaColors.plpTileBoxShadow,
+            _hover: {
+                transform: `scale(${figmaColors.plpTileHoverScale})`
+            }
+        },
         favIcon: {
             position: 'absolute',
             variant: 'unstyled',
@@ -19,11 +29,18 @@ export default {
         },
         image: {
             ratio: 1,
-            paddingBottom: 2
+            paddingBottom: 2,
+            borderTopLeftRadius: figmaColors.plpTileBorderRadius
         },
-        price: {},
+        price: {
+            fontSize: figmaColors.plpTileprodPriceFontSize,
+            fontWeight: figmaColors.plpTileprodPriceFontWeight,
+            color: 'plpTileprodPriceColor'
+        },
         title: {
-            fontWeight: 600
+            fontSize: figmaColors.plpTileprodNameFontSize,
+            fontWeight: figmaColors.plpTileprodNameFontWeight,
+            color: 'plpTileprodNameColor'
         },
         rating: {},
         variations: {}

@@ -32,7 +32,6 @@ import {productUrlBuilder, searchUrlBuilder, categoryUrlBuilder} from '../../uti
 //customization
 import {searchIconBurts} from '../icons'
 
-
 const formatSuggestions = (searchSuggestions, input) => {
     return {
         categorySuggestions: searchSuggestions?.categorySuggestions?.categories?.map(
@@ -178,9 +177,7 @@ const Search = (props) => {
     }
 
     return (
-        <Box
-            width= {{lg: "100%"}}
-            maxWidth= {{lg: "301px"}}>
+        <Box width={{lg: '100%'}} maxWidth={{lg: '301px'}}>
             <Popover isOpen={isOpen} isLazy initialFocusRef={searchInputRef}>
                 <PopoverTrigger>
                     <form onSubmit={onSubmitSearch}>
@@ -199,8 +196,8 @@ const Search = (props) => {
                                     ref={searchInputRef}
                                     {...props}
                                     variant="filled"
-                                    borderRadius={{lg: "2rem"}}
-                                    maxHeight= {{lg: "38px"}}
+                                    borderRadius={{lg: '2rem'}}
+                                    maxHeight={{lg: '38px'}}
                                 />
                             </InputGroup>
                             <HideOnDesktop>

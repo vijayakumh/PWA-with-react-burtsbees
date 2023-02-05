@@ -28,9 +28,9 @@ export default function useLoginFields({form: {control, errors}, prefix = ''}) {
         password: {
             name: `${prefix}password`,
             // label: formatMessage({
-                //     defaultMessage: 'Password',
-                //     id: 'use_login_fields.label.password'
-                // }),
+            //     defaultMessage: 'Password',
+            //     id: 'use_login_fields.label.password'
+            // }),
             placeholder: 'Password',
             defaultValue: '',
             type: 'password',

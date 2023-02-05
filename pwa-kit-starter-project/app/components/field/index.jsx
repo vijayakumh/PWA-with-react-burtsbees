@@ -67,9 +67,9 @@ const Field = ({
                                     type={inputType}
                                     placeholder={placeholder}
                                     {..._inputProps}
-                                    borderRadius={"none"}
-                                    borderColor={"#333333"}
-                                    _placeholder={{ color: '#5F504D'}}
+                                    borderRadius={'none'}
+                                    borderColor={'#333333'}
+                                    _placeholder={{color: '#5F504D'}}
                                     fontSize={{base: '14px'}}
                                 />
                             )}
@@ -81,16 +81,16 @@ const Field = ({
                                     value={value}
                                     type="hidden"
                                     {..._inputProps}
-                                    borderRadius={"none"}
-                                    borderColor={"#333333"}
+                                    borderRadius={'none'}
+                                    borderColor={'#333333'}
                                 />
                             )}
 
                             {type === 'password' && (
                                 <InputRightElement
-                                borderRadius={"none"}
-                                borderColor={"#333333"}
-                                _placeholder={{ color: '#5F504D'}}
+                                    borderRadius={'none'}
+                                    borderColor={'#333333'}
+                                    _placeholder={{color: '#5F504D'}}
                                 >
                                     <IconButton
                                         variant="ghosted"
@@ -108,8 +108,8 @@ const Field = ({
                                     value={value}
                                     placeholder={placeholder}
                                     {..._inputProps}
-                                    borderColor={"#333333"}
-                                    _placeholder={{ color: '#5F504D'}}
+                                    borderColor={'#333333'}
+                                    _placeholder={{color: '#5F504D'}}
                                 >
                                     {options.map((opt) => (
                                         <option key={`${opt.label}-${opt.value}`} value={opt.value}>

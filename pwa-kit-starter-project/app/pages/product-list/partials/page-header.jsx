@@ -9,12 +9,13 @@ import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 import {isServer} from '../../../utils/utils'
 // Components
-import {Box, Heading, Flex, Text, Fade} from '@chakra-ui/react'
+import {Box, Heading, Flex, Text, Fade, useMultiStyleConfig} from '@chakra-ui/react'
 
 // Project Components
 import Breadcrumb from '../../../components/breadcrumb'
 
 const PageHeader = ({category, productSearchResult, isLoading, searchQuery, ...otherProps}) => {
+    const styles = useMultiStyleConfig('refinements')
     return (
         <Box {...otherProps} data-testid="sf-product-list-breadcrumb">
             {/* Breadcrumb */}
@@ -22,10 +23,10 @@ const PageHeader = ({category, productSearchResult, isLoading, searchQuery, ...o
             {searchQuery && <Text>Search Results for</Text>}
             {/* Category Title */}
             <Flex>
-                <Heading as="h2" size="lg" marginRight={2}>
+                <Heading as="h2" size="lg" marginRight={2} {...styles.heading}>
                     {`${category?.name || searchQuery || ''}`}
                 </Heading>
-                <Heading as="h2" size="lg" marginRight={2}>
+                <Heading as="h2" size="lg" marginRight={2} {...styles.heading}>
                     {isServer ? (
                         <Fragment>({productSearchResult?.total})</Fragment>
                     ) : (

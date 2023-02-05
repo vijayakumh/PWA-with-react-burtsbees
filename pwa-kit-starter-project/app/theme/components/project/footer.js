@@ -29,7 +29,7 @@ export default {
     baseStyle: {
         container: {
             width: 'full',
-            background: 'beige'
+            background: 'footerBackground'
         },
         content: {
             maxWidth: 'container.xxl',
@@ -58,15 +58,15 @@ export default {
             width: '28%'
         },
         subscribeHeading: {
-            paddingBottom: "16px",
-            fontWeight: "500",
-            fontSize: "18px",
+            paddingBottom: '16px',
+            fontWeight: '500',
+            fontSize: '18px'
         },
         subscribeMessage: {
             fontSize: 'sm',
             marginBottom: 4,
-            minHeight: "72px",
-            lineHeight: "130%"
+            minHeight: '72px',
+            lineHeight: '130%'
         },
         localeSelector: {
             display: 'inline-block',
@@ -89,11 +89,10 @@ export default {
             marginBottom: 4,
             borderTop: '1px solid',
             background: 'black'
-
         },
         copyright: {
             fontSize: 'sm',
-            marginBottom: 6,
+            marginBottom: 6
         },
         socialIcons: {
             marginTop: 4
@@ -104,29 +103,27 @@ export default {
         subscribeButtonContainerButton: {
             background: 'globalTextColor',
             borderRadius: 'none',
-            width: "100%"
+            width: '100%'
         },
         burtsFooterLogo: {
-            width: "100%",
-            height: "100%",
-            maxWidth: ["143px", "143px", "185px", "185px"]
+            width: '100%',
+            height: '100%',
+            maxWidth: ['143px', '143px', '185px', '185px']
         },
-        footerWebsiteAccessibility: {
-
-        },
+        footerWebsiteAccessibility: {},
         burtsfooterButton: {
-            background: "none",
-            backgroundColor: "none",
+            background: 'none',
+            backgroundColor: 'none'
         },
         linkedListStyle: {
-            direction:"columns",
-            pt: "20px",
-            w: "51%",
-            justifyContent: "space-between"
+            direction: 'columns',
+            pt: '20px',
+            w: '51%',
+            justifyContent: 'space-between'
         },
         subscribeContainer: {
-            w: "24%",
-            pt: "32px"
+            w: '24%',
+            pt: '32px'
         },
         footerlogoContainer: {
             display: 'flex',

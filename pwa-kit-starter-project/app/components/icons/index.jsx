@@ -72,7 +72,7 @@ import '../../assets/svg/burtstwitter.svg'
 import '../../assets/svg/burtspinterest.svg'
 import '../../assets/svg/burtsfooterUScountry.svg'
 import '../../assets/svg/burtsfooteronetrustsite.svg'
-
+import '../../assets/svg/burtshamburger.svg'
 
 // For non-square SVGs, we can use the symbol data from the import to set the
 // proper viewBox attribute on the Icon wrapper.
@@ -85,11 +85,12 @@ import MastercardSymbol from '../../assets/svg/cc-mastercard.svg'
 import PaypalSymbol from '../../assets/svg/paypal.svg'
 import SocialPinterestSymbol from '../../assets/svg/social-pinterest.svg'
 import VisaSymbol from '../../assets/svg/cc-visa.svg'
+import burtsBrandSymbol from '../../assets/svg/burtslogo.svg'
 
 // TODO: We're hardcoding the `viewBox` for these imported SVGs temporarily as the
 // SVG loader plugin is not properly providing us the symbol data on the client side.
 AmexSymbol.viewBox = AmexSymbol.viewBox || '0 0 38 22'
-BrandLogoSymbol.viewBox = BrandLogoSymbol.viewBox || '0 0 46 32'
+BrandLogoSymbol.viewBox = BrandLogoSymbol.viewBox || '0 0 320 40'
 CVVSymbol.viewBox = CVVSymbol.viewBox || '0 0 41 24'
 DiscoverSymbol.viewBox = DiscoverSymbol.viewBox || '0 0 38 22'
 LocationSymbol.viewBox = LocationSymbol.viewBox || '0 0 16 21'
@@ -97,6 +98,7 @@ MastercardSymbol.viewBox = MastercardSymbol.viewBox || '0 0 38 22'
 PaypalSymbol.viewBox = PaypalSymbol.viewBox || '0 0 80 20'
 SocialPinterestSymbol.viewBox = SocialPinterestSymbol.viewBox || '0 0 21 20'
 VisaSymbol.viewBox = VisaSymbol.viewBox || '0 0 38 22'
+burtsBrandSymbol.viewBox = burtsBrandSymbol.viewBox || '0 0 320 40'
 
 /**
  * A helper for creating a Chakra-wrapped icon from our own SVG imports via sprite sheet.
@@ -178,10 +180,10 @@ export const HeartSolidIcon = icon('heart-solid')
 export const CloseIcon = icon('close')
 
 //customization
-export const NewBrandLogo = icon('burtslogo', {viewBox: BrandLogoSymbol.viewBox})
+export const NewBrandLogo = icon('burtslogo', {viewBox: burtsBrandSymbol.viewBox})
 export const AccountIconWhite = icon('user-white')
 export const BasketIconWhite = icon('cart-white')
-export const searchIconBurts = icon('icon-search')
+export const SearchIconBurts = icon('icon-search')
 export const BasketIconWhiteMobile = icon('cart-icon-mobile')
 export const BurtsNewFooterLogo = icon('burts-footer-logo')
 export const Burtsfootersubscriptionarrow = icon('footersubscriptionarrow')
@@ -193,3 +195,4 @@ export const BurtsFooterTwitter = icon('burtstwitter')
 export const BurtsFooterPinterest = icon('burtspinterest')
 export const BurtsFooterUSCountry = icon('burtsfooterUScountry')
 export const BurtsFooterOneTrustSiteBadge = icon('burtsfooteronetrustsite')
+export const BurtsHamburger = icon('burtshamburger')

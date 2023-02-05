@@ -203,14 +203,8 @@ export const AuthModal = ({
     return (
         <Modal size="sm" closeOnOverlayClick={false} data-testid="sf-auth-modal" {...props}>
             <ModalOverlay />
-            <ModalContent 
-            width={{lg: "100%"}}
-            maxWidth={{lg: "430px"}}
-            >
-                <ModalCloseButton size='lg'
-                    right={{lg: '15px'}}
-                    top={{lg: '17px'}}
-                />
+            <ModalContent width={{lg: '100%'}} maxWidth={{lg: '430px'}}>
+                <ModalCloseButton size="lg" right={{lg: '15px'}} top={{lg: '17px'}} />
                 <ModalBody pb={8} bg="white" paddingBottom={14} marginTop={14}>
                     {!form.formState.isSubmitSuccessful && currentView === LOGIN_VIEW && (
                         <LoginForm

@@ -3506,6 +3506,18 @@
       "type": 0,
       "value": "Cookie Settings"
     }
+  ],
+  "burtsheader.button.closeText": [
+    {
+      "type": 0,
+      "value": "Close"
+    }
+  ],
+  "burtsheader.promotional_banner_text": [
+    {
+      "type": 0,
+      "value": "Get Free Shipping on $35+ Orders. Order by 12/19 for 2 day shipping & get your gifts in time!"
+    }
   ]
 
 }

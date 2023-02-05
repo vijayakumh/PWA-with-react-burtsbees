@@ -43,7 +43,9 @@ import {
     HeartIcon,
     SignoutIcon,
     BasketIconWhite,
-    BasketIconWhiteMobile
+    BasketIconWhiteMobile,
+    SearchIconBurts,
+    BurtsHamburger
 } from '../icons'
 
 import {noop} from '../../utils/utils'
@@ -119,176 +121,26 @@ const Header = ({
 
     return (
         <Box {...styles.container} {...props}>
-            <Box backgroundColor= '#6c8768'
-                    height= {{base: '40px', lg: '74px'}}
-            >
-                <Box
-                    textAlign= {{base: 'center',md: 'center', lg: 'left'}}
-                    lineHeight= {{base: 1, lg: 1}}
-                    display= {{base: 'flex', md: 'flex'}}
-                    alignItems= {{base: 'center', md: 'center'}}
-                    justifyContent= {{base: 'center', md: 'center', lg: 'left'}}
-                    {...styles.content}   
-                    >
-                    <PromoBanner />
-                    <Box {...styles.searchContainer} display= {{base: "none", md: "none", lg: "block"}}>
-                        <Flex 
-                            alignItems={['baseline', 'baseline', 'baseline', 'center']}  
-                            width= {{lg: "100%"}}
-                            justifyContent= {{lg: "flex-end"}}
-                        >
-                            <Search
-                                // placeholder={intl.formatMessage({
-                                //     id: 'header.field.placeholder.search_for_products',
-                                //     defaultMessage: 'Search'
-                                // })}
-                                {...styles.search}
-                            />
-                            <Box>
-                                <Flex alignItems={['baseline', 'baseline', 'baseline', 'center']}>
-                                    <AccountIconWhite
-                                        {...styles.accountIcon}
-                                        tabIndex={0}
-                                        onMouseOver={isDesktop ? onOpen : noop}
-                                        onKeyDown={(e) => {
-                                            e.key === ENTER_KEY ? onMyAccountClick() : noop
-                                        }}
-                                        onClick={onMyAccountClick}
-                                        aria-label={intl.formatMessage({
-                                            id: 'header.button.assistive_msg.my_account',
-                                            defaultMessage: 'My account'
-                                        })}
-                                    />
-                                    {customer.isRegistered && (
-                                        <Popover
-                                            isLazy
-                                            arrowSize={15}
-                                            isOpen={isOpen}
-                                            placement="bottom-end"
-                                            onClose={onClose}
-                                            onOpen={onOpen}
-                                        >
-                                            <PopoverTrigger>
-                                                <ChevronDownIcon
-                                                    aria-label="My account trigger"
-                                                    onMouseLeave={handleIconsMouseLeave}
-                                                    onKeyDown={(e) => {
-                                                        keyMap[e.key]?.(e)
-                                                    }}
-                                                    {...styles.arrowDown}
-                                                    onMouseOver={onOpen}
-                                                    tabIndex={0}
-                                                />
-                                            </PopoverTrigger>
-
-                                            <PopoverContent
-                                                {...styles.popoverContent}
-                                                onMouseLeave={() => {
-                                                    hasEnterPopoverContent.current = false
-                                                    onClose()
-                                                  }}
-                                                onMouseOver={() => {
-                                                    hasEnterPopoverContent.current = true
-                                                }}
-                                            >
-                                                <PopoverArrow />
-                                                <PopoverHeader>
-                                                    <Text>
-                                                        {intl.formatMessage({
-                                                            defaultMessage: 'My Account',
-                                                            id: 'header.popover.title.my_account'
-                                                        })}
-                                                    </Text>
-                                                </PopoverHeader>
-                                                <PopoverBody>
-                                                    <Stack spacing={0} as="nav" data-testid="account-detail-nav">
-                                                        {navLinks.map((link) => {
-                                                            const LinkIcon = link.icon
-                                                            return (
-                                                                <Button
-                                                                    key={link.name}
-                                                                    as={Link}
-                                                                    to={`/account${link.path}`}
-                                                                    useNavLink={true}
-                                                                    variant="menu-link"
-                                                                    leftIcon={<LinkIcon boxSize={5} />}
-                                                                >
-                                                                    {intl.formatMessage(messages[link.name])}
-                                                                </Button>
-                                                            )
-                                                        })}
-                                                    </Stack>
-                                                </PopoverBody>
-                                                <PopoverFooter onClick={onSignoutClick} cursor="pointer">
-                                                    <Divider colorScheme="gray" />
-                                                    <Button variant="unstyled" {...styles.signout}>
-                                                        <Flex>
-                                                            <SignoutIcon boxSize={5} {...styles.signoutIcon} />
-                                                            <Text as="span" {...styles.signoutText}>
-                                                                {intl.formatMessage({
-                                                                    defaultMessage: 'Log out',
-                                                                    id: 'header.popover.action.log_out'
-                                                                })}
-                                                            </Text>
-                                                        </Flex>
-                                                    </Button>
-                                                </PopoverFooter>
-                                            </PopoverContent>
-                                        </Popover>
-                                    )}
-                                    {/* <IconButtonWithRegistration
-                                        aria-label={intl.formatMessage({
-                                            defaultMessage: 'Wishlist',
-                                            id: 'header.button.assistive_msg.wishlist'
-                                        })}
-                                        icon={<HeartIcon />}
-                                        variant="unstyled"
-                                        {...styles.icons}
-                                        onClick={onWishlistClick}
-                                    /> */}
-                                    <IconButton
-                                        aria-label={intl.formatMessage({
-                                            id: 'header.button.assistive_msg.my_cart',
-                                            defaultMessage: 'My cart'
-                                        })}
-                                        icon={
-                                            <>
-                                                <BasketIconWhite />
-                                                {basket?.loaded && (
-                                                    <Badge variant="notification">
-                                                        {basket.itemAccumulatedCount}
-                                                    </Badge>
-                                                )}
-                                            </>
-                                        }
-                                        variant="unstyled"
-                                        {...styles.icons}
-                                        onClick={onMyCartClick}
-                                        display= {{base: 'none', md: 'none', lg: 'block'}}
-                                    />
-                                </Flex>
-                            </Box>
-                        </Flex>
-                    </Box>
-                </Box>
-            </Box>
+            <PromoBanner />
             <Box
-                height= {{base: '58px', md: '58px', lg: '80px'}}
-                backgroundColor= {'#ffc456'}
+                height={{base: '58px', md: '58px', lg: '80px'}}
+                // backgroundColor= {'#ffc456'}
+                {...styles.innerContainer}
             >
                 <Box {...styles.content}>
                     {showLoading && <LoadingSpinner wrapperStyles={{height: '100vh'}} />}
-                    <Flex wrap="wrap" 
+                    <Flex
+                        wrap="wrap"
                         alignItems={['center', 'center', 'center', 'center']}
-                        height= {'100%'}
-                        justifyContent= {{base: 'space-between', md: 'space-between'}}
+                        height={'100%'}
+                        justifyContent={{base: 'space-between', md: 'space-between'}}
                     >
                         <IconButton
                             aria-label={intl.formatMessage({
                                 id: 'header.button.assistive_msg.menu',
                                 defaultMessage: 'Menu'
                             })}
-                            icon={<HamburgerIcon />}
+                            icon={<BurtsHamburger />}
                             variant="unstyled"
                             display={{lg: 'none'}}
                             {...styles.icons}
@@ -299,20 +151,25 @@ const Header = ({
                                 id: 'header.button.assistive_msg.logo',
                                 defaultMessage: 'Logo'
                             })}
-                            icon={<NewBrandLogo {...styles.logo} 
-                                width= {{base: '116px', md: '116px', lg: '184px'}}
-                                height= {{base: '58px', md: '58px', lg: '80px'}}
-                            />}
+                            icon={
+                                <NewBrandLogo
+                                    {...styles.logo}
+                                    width={{base: '179px', md: '179px', lg: '291px'}}
+                                    height={{base: null, md: null, lg: '36px'}}
+                                />
+                            }
                             {...styles.icons}
                             variant="unstyled"
                             onClick={onLogoClick}
-                            height= {'100%'}
+                            // height= {'100%'}
                             // display= {{base: 'none', md: 'none', lg: 'block'}}
                         />
-                        <Box 
+                        <Box
                             {...styles.bodyContainer}
-                            display= {{base: 'none', md: 'none', lg: 'block'}}
-                        >{children}</Box>
+                            display={{base: 'none', md: 'none', lg: 'block'}}
+                        >
+                            {children}
+                        </Box>
                         {/* <AccountIcon
                             {...styles.accountIcon}
                             tabIndex={0}
@@ -433,26 +290,50 @@ const Header = ({
                             {...styles.icons}
                             onClick={onMyCartClick}
                         /> */}
-                        <IconButton
-                            aria-label={intl.formatMessage({
-                                id: 'header.button.assistive_msg.my_cart',
-                                defaultMessage: 'My cart'
-                            })}
-                            icon={
-                                <>
-                                    <BasketIconWhiteMobile />
-                                    {basket?.loaded && (
-                                        <Badge variant="notification">
-                                            {basket.itemAccumulatedCount}
-                                        </Badge>
-                                    )}
-                                </>
-                            }
-                            variant="unstyled"
-                            {...styles.icons}
-                            onClick={onMyCartClick}
-                            display= {{base: 'block', md: 'block', lg: 'none'}}
-                        />
+                        <Flex>
+                            <IconButton
+                                // aria-label={intl.formatMessage({
+                                //     id: 'header.button.assistive_msg.my_cart',
+                                //     defaultMessage: 'My cart'
+                                // })}
+                                icon={
+                                    <>
+                                        <SearchIconBurts />
+                                        {/* {basket?.loaded && (
+                                            <Badge variant="notification">
+                                                {basket.itemAccumulatedCount}
+                                            </Badge>
+                                        )} */}
+                                    </>
+                                }
+                                variant="unstyled"
+                                // {...styles.icons}
+                                size="xs"
+                                onClick={onMyCartClick}
+                                display={{base: 'block', md: 'block', lg: 'none'}}
+                            />
+                            <IconButton
+                                aria-label={intl.formatMessage({
+                                    id: 'header.button.assistive_msg.my_cart',
+                                    defaultMessage: 'My cart'
+                                })}
+                                icon={
+                                    <>
+                                        <BasketIconWhiteMobile />
+                                        {basket?.loaded && (
+                                            <Badge variant="notification">
+                                                {basket.itemAccumulatedCount}
+                                            </Badge>
+                                        )}
+                                    </>
+                                }
+                                variant="unstyled"
+                                {...styles.icons}
+                                size="xs"
+                                onClick={onMyCartClick}
+                                display={{base: 'block', md: 'block', lg: 'none'}}
+                            />
+                        </Flex>
                     </Flex>
                 </Box>
             </Box>

@@ -7,30 +7,38 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-    useMultiStyleConfig,
-    Box,
-    Text,
-    Link,
-} from '@chakra-ui/react'
+import {useIntl} from 'react-intl'
+import {useMultiStyleConfig, Box, Text, Link, Button, IconButton} from '@chakra-ui/react'
+import {CloseIcon} from '../icons'
 
 const PromoBanner = ({title, img, actions, ...props}) => {
-    const styles = useMultiStyleConfig('promotionalBanner');
-
+    const intl = useIntl()
+    const styles = useMultiStyleConfig('promotionalBanner')
     return (
-        <Box {...styles.container}
-            >
-           <Box {...styles.content}
-           >
-            <Link>
-                <Text 
-                    as="span"
-                    fontSize={{base: '12px', lg: '16px'}}
+        <Box {...styles.container}>
+            <Box {...styles.content}>
+                <Link {...styles.text}>
+                    {intl.formatMessage({
+                        id: 'burtsheader.promotional_banner_text',
+                        defaultMessage:
+                            'Get Free Shipping on $35+ Orders. Order by 12/19 for 2 day shipping & get your gifts in time!'
+                    })}
+                </Link>
+                <IconButton
+                    {...styles.closeButton}
+                    text={intl.formatMessage({
+                        id: 'burtsheader.button.closeText',
+                        defaultMessage: 'Close'
+                    })}
+                    variant="unstyled"
+                    icon={<CloseIcon />}
                 >
-                    Get Free Shipping on $35+ Orders. Order by 12/19 for 2 day shipping & get your gifts in time!
-                </Text>
-            </Link>
-           </Box>
+                    {/* {intl.formatMessage({
+                    id: 'burtsheader.button.closeText',
+                    defaultMessage: 'Close'
+                })} */}
+                </IconButton>
+            </Box>
         </Box>
     )
 }
@@ -38,7 +46,6 @@ const PromoBanner = ({title, img, actions, ...props}) => {
 PromoBanner.displayName = 'Promotional Banner'
 
 PromoBanner.propTypes = {
-    
     /**
      * Promotional Banner component main title
      */

@@ -18,7 +18,17 @@ export default {
                       _active: {bg: 'blue.800'},
                       _disabled: {bg: 'blue.300'}
                   }
-                : {},
+                : {
+                      backgroundColor: 'buttonBackground',
+                      color: 'buttonTextColor',
+                      _hover: {
+                          bg: 'buttonHoverBackground',
+                          _disabled: {bg: 'buttonDisabledBackground'},
+                          color: 'buttonHoverTextColor'
+                      },
+                      _active: {bg: 'blue.800'},
+                      _disabled: {bg: 'blue.300'}
+                  },
         outline: (props) =>
             props.colorScheme === 'black'
                 ? {color: 'gray.900', _hover: {bg: 'gray.50'}, borderColor: 'gray.200'}
@@ -33,7 +43,7 @@ export default {
             paddingRight: 3
         },
         link: (props) => ({
-            color: props.colorScheme === 'red' ? 'red.500' : 'blue.600',
+            color: props.colorScheme === 'red' ? 'red.500' : 'linkTextColor',
             fontWeight: 'normal',
             minWidth: '1em',
             lineHeight: 4
@@ -69,6 +79,10 @@ export default {
         md: {
             height: 11,
             minWidth: 11
+        },
+        lg: {
+            height: 20,
+            minWidth: 20
         }
     },
     defaultProps: {

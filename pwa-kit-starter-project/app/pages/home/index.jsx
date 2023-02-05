@@ -15,7 +15,7 @@ import {
     Button,
     SimpleGrid,
     HStack,
-    VStack, 
+    VStack,
     Text,
     Flex,
     Stack,
@@ -46,11 +46,13 @@ const Home = ({productSearchResult, isLoading}) => {
     const intl = useIntl()
 
     return (
-        <Box data-testid="home-page" layerStyle="page"
-            paddingTop={{base: 0, md: 0, lg:0}}
-            paddingBottom= {{base: 0, md: 0, lg:0}}
-            paddingInlineStart= {0}
-            paddingInlineEnd= {{base: 0, md: 0, lg:0}}
+        <Box
+            data-testid="home-page"
+            layerStyle="page"
+            paddingTop={{base: 0, md: 0, lg: 0}}
+            paddingBottom={{base: 0, md: 0, lg: 0}}
+            paddingInlineStart={0}
+            paddingInlineEnd={{base: 0, md: 0, lg: 0}}
         >
             <Seo
                 title="Home Page"

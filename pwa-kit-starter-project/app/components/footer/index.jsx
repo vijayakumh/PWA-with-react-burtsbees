@@ -32,7 +32,12 @@ import {HideOnDesktop, HideOnMobile} from '../responsive'
 import {getPathWithLocale} from '../../utils/url'
 import LocaleText from '../locale-text'
 import useSite from '../../hooks/use-site'
-import {BurtsNewFooterLogo, Burtsfootersubscriptionarrow, BurtsFooterUSCountry, BurtsFooterOneTrustSiteBadge} from '../icons'
+import {
+    BurtsNewFooterLogo,
+    Burtsfootersubscriptionarrow,
+    BurtsFooterUSCountry,
+    BurtsFooterOneTrustSiteBadge
+} from '../icons'
 
 const Footer = ({...otherProps}) => {
     const styles = useMultiStyleConfig('Footer')
@@ -48,17 +53,13 @@ const Footer = ({...otherProps}) => {
             <Box {...styles.content}>
                 <StylesProvider value={styles}>
                     <HideOnMobile>
-                        <Stack direction={"columns"}>
+                        <Stack direction={'columns'}>
                             <Box {...styles.footerlogoContainer}>
                                 <Link>
-                                    <BurtsNewFooterLogo 
-                                        {...styles.burtsFooterLogo}
-                                    />
+                                    <BurtsNewFooterLogo {...styles.burtsFooterLogo} />
                                 </Link>
                             </Box>
-                            <Stack 
-                            {...styles.linkedListStyle}
-                            >
+                            <Stack {...styles.linkedListStyle}>
                                 <LinksList
                                     heading={intl.formatMessage({
                                         id: 'burtsfooter.column.customer_support',
@@ -304,7 +305,11 @@ const Footer = ({...otherProps}) => {
                                             defaultMessage: ''
                                         })}
                                     </Text>
-                                    <SocialIcons variant="flex-start" pinterestInnerColor="black" {...styles.socialIcons} />
+                                    <SocialIcons
+                                        variant="flex-start"
+                                        pinterestInnerColor="black"
+                                        {...styles.socialIcons}
+                                    />
                                     <Box>
                                         <Link>
                                             {intl.formatMessage({
@@ -329,20 +334,20 @@ const Footer = ({...otherProps}) => {
                                 <LegalLinks variant="horizontal" />
                             </HideOnMobile> */}
                         </SimpleGrid>
-                        <Stack direction={"row"} className="okoklolo" justifyContent={"space-between"}>
+                        <Stack direction={'row'} justifyContent={'space-between'}>
                             <Box>
                                 <Button {...styles.burtsfooterButton}>
                                     <BurtsFooterUSCountry />
                                     {intl.formatMessage({
-                                            id: 'burtsfooter.content_bottom.change_region_button',
-                                            defaultMessage: ''
-                                        })}
+                                        id: 'burtsfooter.content_bottom.change_region_button',
+                                        defaultMessage: ''
+                                    })}
                                 </Button>
                                 <Button {...styles.burtsfooterButton}>
                                     {intl.formatMessage({
-                                            id: 'burtsfooter.content_bottom.cookie_settings',
-                                            defaultMessage: ''
-                                        })}
+                                        id: 'burtsfooter.content_bottom.cookie_settings',
+                                        defaultMessage: ''
+                                    })}
                                 </Button>
                             </Box>
                             <Box>
@@ -375,7 +380,8 @@ const Subscribe = ({...otherProps}) => {
             <Text {...styles.subscribeMessage}>
                 {intl.formatMessage({
                     id: 'burtsfooter.subscribe.content.message',
-                    defaultMessage: 'Become a Hive Member to be the first to learn aboutspecial offers, helpful tips and the latest buzz.'
+                    defaultMessage:
+                        'Become a Hive Member to be the first to learn aboutspecial offers, helpful tips and the latest buzz.'
                 })}
             </Text>
 
@@ -388,10 +394,7 @@ const Subscribe = ({...otherProps}) => {
                                 id: 'footer.subscribe.button.sign_up',
                                 defaultMessage: 'Sign Up'
                             })} */}
-                            <Burtsfootersubscriptionarrow 
-                            width={"100%"}
-                            height={"100%"}
-                            />
+                            <Burtsfootersubscriptionarrow width={'100%'} height={'100%'} />
                         </Button>
                     </InputRightElement>
                 </InputGroup>

@@ -12,7 +12,7 @@ import {DEFAULT_SITE_TITLE} from '../../constants'
 
 const Seo = ({title, description, noIndex, children, ...props}) => {
     // const fullTitle = title ? `${title} | ${DEFAULT_SITE_TITLE}` : DEFAULT_SITE_TITLE
-    
+
     //Custom changes for site title
     const fullTitle = DEFAULT_SITE_TITLE ? `${DEFAULT_SITE_TITLE} | ${title}` : title
 

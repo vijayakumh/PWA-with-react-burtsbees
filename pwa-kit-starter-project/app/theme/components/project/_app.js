@@ -12,7 +12,7 @@ export default {
             flex: 1,
             display: 'flex',
             flexDirection: 'column',
-            backgroundColor: 'white',
+            backgroundColor: 'globalBackgroundColor',
             minWidth: '375px'
         },
         headerWrapper: {

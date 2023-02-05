@@ -14,7 +14,7 @@ const LoginFields = ({form, prefix = ''}) => {
     const fields = useLoginFields({form, prefix})
 
     return (
-        <Stack spacing={"4px"}>
+        <Stack spacing={'4px'}>
             <Field {...fields.email} />
             <Field {...fields.password} />
         </Stack>

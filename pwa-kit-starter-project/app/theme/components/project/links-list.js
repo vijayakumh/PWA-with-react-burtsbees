@@ -7,8 +7,7 @@
 export default {
     parts: ['container', 'list', 'listItem', 'listItemSx', 'heading'],
     baseStyle: {
-        container: {
-        },
+        container: {},
         list: {
             fontSize: 'sm'
         },
@@ -18,14 +17,14 @@ export default {
         heading: {
             // fontSize: 'md',
             paddingTop: 3,
-            paddingBottom: "16px",
-            fontWeight: "500",
-            fontSize: "18px",
+            paddingBottom: '16px',
+            fontWeight: '500',
+            fontSize: '18px'
         },
         burtsListItem: {
-            fontWeight: "400",
-            lineHeight: "130%",
-            paddingBottom: "8px"
+            fontWeight: '400',
+            lineHeight: '130%',
+            paddingBottom: '8px'
         }
     },
     variants: {

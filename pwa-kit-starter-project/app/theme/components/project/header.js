@@ -17,8 +17,8 @@ export default {
             marginLeft: 'auto',
             marginRight: 'auto',
             height: '100%',
-            paddingLeft: [4, 4, 0, 0],
-            paddingRight: [4, 4, 0, 0],
+            paddingLeft: [3, 3, 0, 0],
+            paddingRight: [3, 3, 0, 0]
             // paddingTop: [1, 1, 2, 4],
             // paddingBottom: [3, 3, 2, 4]
         },
@@ -31,11 +31,15 @@ export default {
         bodyContainer: {
             flex: '1'
         },
+        innerContainer: {
+            backgroundColor: 'headerBackground'
+        },
         logo: {
-            // width: '184px',
+            width: '100%'
             // height: '80px'
         },
         icons: {
+            // width: ['179px', '179px', '179px', '291px'],
             // marginBottom: [1, 1, 2, 0],
             // marginLeft: "5px"
         },
@@ -49,7 +53,7 @@ export default {
             _focusVisible: {
                 outline: 0
             },
-            marginLeft: "38px"
+            marginLeft: '38px'
         },
         arrowDown: {
             height: 11,

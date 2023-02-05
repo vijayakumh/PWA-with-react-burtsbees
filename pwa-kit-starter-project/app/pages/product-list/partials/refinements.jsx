@@ -14,7 +14,8 @@ import {
     AccordionItem,
     AccordionButton,
     AccordionPanel,
-    AccordionIcon
+    AccordionIcon,
+    useMultiStyleConfig
 } from '@chakra-ui/react'
 import PropTypes from 'prop-types'
 import ColorRefinements from './color-refinements'
@@ -33,6 +34,7 @@ const componentMap = {
 }
 
 const Refinements = ({filters, toggleFilter, selectedFilters, isLoading}) => {
+    const styles = useMultiStyleConfig('refinements')
     // Getting the indices of filters to open accordions by default
     let filtersIndexes = filters?.map((filter, idx) => idx)
 
@@ -90,6 +92,8 @@ const Refinements = ({filters, toggleFilter, selectedFilters, isLoading}) => {
                                         }
                                         paddingBottom={6}
                                         borderTop={idx === 0 && 'none'}
+                                        // borderColor="red"
+                                        {...styles.border}
                                     >
                                         {({isExpanded}) => (
                                             <>
@@ -100,15 +104,18 @@ const Refinements = ({filters, toggleFilter, selectedFilters, isLoading}) => {
                                                     <Text
                                                         flex="1"
                                                         textAlign="left"
-                                                        fontSize="md"
-                                                        fontWeight={600}
+                                                        {...styles.subHeading}
                                                     >
                                                         {filter.label}
                                                     </Text>
                                                     <AccordionIcon />
                                                 </AccordionButton>
-                                                <AccordionPanel paddingLeft={0}>
+                                                <AccordionPanel
+                                                    paddingLeft={0}
+                                                    {...styles.contentStyles}
+                                                >
                                                     <Values
+                                                        background="green"
                                                         selectedFilters={selectedFiltersArray}
                                                         filter={filter}
                                                         toggleFilter={toggleFilter}

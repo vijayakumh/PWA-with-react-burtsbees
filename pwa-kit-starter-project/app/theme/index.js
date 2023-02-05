@@ -14,6 +14,7 @@ import sizes from './foundations/sizes'
 import space from './foundations/space'
 import layerStyles from './foundations/layerStyles'
 import shadows from './foundations/shadows'
+import fonts from './foundations/fonts'
 
 // Base component style overrides
 import Alert from './components/base/alert'
@@ -53,6 +54,7 @@ import ImageGallery from './components/project/image-gallery'
 
 //custom component styles
 import promotionalBanner from './components/project/promotional-banner'
+import refinements from './components/project/refinements'
 
 // Please refer to the Chakra-Ui theme customization docs found
 // here https://chakra-ui.com/docs/theming/customize-theme to learn
@@ -65,6 +67,7 @@ const overrides = {
     space,
     gradients,
     shadows,
+    fonts,
     components: {
         // base components
         Accordion,
@@ -101,7 +104,8 @@ const overrides = {
         ProductTile,
         SwatchGroup,
         ImageGallery,
-        promotionalBanner
+        promotionalBanner,
+        refinements
     }
 }
 

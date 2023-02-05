@@ -262,7 +262,7 @@ const ProductList = (props) => {
                         spacing={4}
                         marginBottom={6}
                     >
-                        <Flex align="left" width="287px">
+                        <Flex align="left" width="287px" className="okoko">
                             <PageHeader
                                 searchQuery={searchQuery}
                                 category={category}
@@ -355,7 +355,11 @@ const ProductList = (props) => {
 
                     {/* Body  */}
                     <Grid templateColumns={{base: '1fr', md: '280px 1fr'}} columnGap={6}>
-                        <Stack display={{base: 'none', md: 'flex'}}>
+                        <Stack
+                            display={{base: 'none', md: 'flex'}}
+                            background="plpFilterSectionBackground"
+                            padding="10px"
+                        >
                             <Refinements
                                 isLoading={filtersLoading}
                                 toggleFilter={toggleFilter}

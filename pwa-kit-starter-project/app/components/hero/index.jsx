@@ -22,11 +22,11 @@ const Hero = ({title, imgDesktop, imgMobile, imgTablet, actions, ...props}) => {
             {...props}
         >
             <Stack
-                // align={'center'}
-                // spacing={{base: 8, md: 10}}
-                // paddingTop={{base: 12, md: 10}}
-                // paddingBottom={{base: 6, md: 10}}
-                // direction={{base: 'column', lg: 'row'}}
+            // align={'center'}
+            // spacing={{base: 8, md: 10}}
+            // paddingTop={{base: 12, md: 10}}
+            // paddingBottom={{base: 6, md: 10}}
+            // direction={{base: 'column', lg: 'row'}}
             >
                 {/* <Stack flex={1} spacing={{base: 5, md: 8}}>
                     <Heading
@@ -66,7 +66,7 @@ const Hero = ({title, imgDesktop, imgMobile, imgTablet, actions, ...props}) => {
                         height={'100%'}
                         src={srcMobile}
                         alt={altMobile}
-                        display= {{md: 'none', lg: 'none'}}
+                        display={{md: 'none', lg: 'none'}}
                     />
                     <Image
                         fit={'cover'}
@@ -75,7 +75,7 @@ const Hero = ({title, imgDesktop, imgMobile, imgTablet, actions, ...props}) => {
                         height={'100%'}
                         src={srcTablet}
                         alt={altTablet}
-                        display= {{base: 'none', md: 'block', lg: 'none'}}
+                        display={{base: 'none', md: 'block', lg: 'none'}}
                     />
                     <Image
                         fit={'cover'}
@@ -84,7 +84,7 @@ const Hero = ({title, imgDesktop, imgMobile, imgTablet, actions, ...props}) => {
                         height={'100%'}
                         src={srcDesktop}
                         alt={altDesktop}
-                        display= {{base: 'none', md: 'none', lg: 'block'}}
+                        display={{base: 'none', md: 'none', lg: 'block'}}
                     />
                 </Box>
             </Stack>

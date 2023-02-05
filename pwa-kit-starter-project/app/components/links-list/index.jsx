@@ -55,9 +55,7 @@ const LinksList = ({
                         </HStack>
                     ) : (
                         links.map((link, i) => (
-                            <ListItem key={i}
-                            {...styles.burtsListItem}
-                            >
+                            <ListItem key={i} {...styles.burtsListItem}>
                                 <Link
                                     to={link.href}
                                     onClick={onLinkClick}

@@ -59,4 +59,4 @@ export const urlPartPositions = {
     NONE: 'none'
 }
 
-export const DEFAULT_SITE_TITLE = 'Burt\'s Bees'
+export const DEFAULT_SITE_TITLE = "Burt's Bees"
